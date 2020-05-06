@@ -1,0 +1,17 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Opinion extends Model
+{
+    protected $fillable = [
+        'user', 'comment', 'rate',
+    ];
+
+    public function movies()
+	{	
+		return $this->belongsTo('App\Movie');
+	}
+}
